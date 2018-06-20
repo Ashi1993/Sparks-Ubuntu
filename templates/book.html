@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Sparks</title>
+    <meta charset="utf-8"/>
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link href="../static/css/app.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <!-- <script src="../static/js/test.js"></script> -->
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container" id="con1">
+        <div class="header">
+            <div class="row row-height">
+                <p class="heading">SPARKS Digital Library</p>
+            </div>
+        </div>
+ 
+        <div class="jumbotron main">
+            <div class="subheading-div">
+                <h2>Search Results for "{{name}}"</h2>
+            </div>
+            <div class="div-area">
+            {% for id, name, author, book, summary in data %}
+            
+                <p> ID of the book: {{ id }} </p><br>
+                <h4> Name of the book : {{ name }} </h4><br>
+                <p> Author of the book: {{ author }} </p><br>
+                <p class="marketing"> {{ summary }} </p>
+                <a href="{{ url_for('loadBookDetails' , id= id) }}" >Read More...</a>
+                <hr>
+            {% endfor %}
+            </div>
+        </div>
+ 
+        <footer class="footer">
+            <p>&copy; Sparks 2018</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

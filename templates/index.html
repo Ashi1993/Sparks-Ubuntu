@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Sparks</title>
+    <meta charset="utf-8"/>
+ 
+    <link href="../static/css/jumbotron-narrow.css" rel="stylesheet">
+ 
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="../static/css/app.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/test.js"></script>
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <div class="row row-height">
+                <p class="heading">SPARKS Digital Library</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="jumbotron">
+                <form id="myForm" action="http://localhost:5000/loadBooks" method="POST">
+                    <p>You can access history books published from 1940 to 1970 through this site.</p>
+                    <p class="search-area">
+                        <div class="row">
+                                <div class="col-lg-3" style="font-size: 25px">Search for Books</div>
+                            <div class="col-lg-6">
+                                <div class="row"><input type="text" style="width: 100%" size="40" maxlength="150" name="name" placeholder="Search...." id="name" /></div>
+                                <br>
+                                <div class="row">
+                                        <div class="col"><input type="radio" name="searchtype" value="general" checked> General Search</div>
+                                        <div class="col"><input type="radio" name="searchtype" value="book"> By Book Name</div>
+                                        <div class="col"><input type="radio" name="searchtype" value="authot"> By Author</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3"><input class="btn btn-primary" style="width: 200px; height: 45px; padding: 3px 24px" type = "submit" value = "submit" /></div>
+                        </div>
+                    </p>        
+                </form>
+            </div>
+        
+            <div>
+                <div class="row marketing">
+                    <h2>අප වෙබ් අඩවියේ ඇති පොත්  කිහිපයක් </h2>
+                </div>
+            
+                <hr>
+                
+                <div class="row marketing">
+                    <div class="col-lg-6">
+                        <h4>සීතාවක රාජසිංහ රජු</h4>
+                        <p>සීතාවක රාජසිංහ රජු ගැන යුරෝපිය ඉතිහාසඥයන් අතර මෙන් ම සිංහල ඉතිහාසඥයන් අතර ද මත භේද පවතී. සිංහල ඉතිහාසඥයන්ගෙන් රාජාවලි කර්තෘ රාජසිංහ රජුගේ වීර වික්‍රමාන්විත ක්‍රියා ඉතා උසස් කර දක්වා ඇති නමුත් මහාවංශකාරයා ඔහු ගැන වැඩි වර්ණනාවක් නොකරන්නේ ය.</p>
+            
+                        <h4>සීතාවක රාජසිංහ රජු</h4>
+                        <p>සීතාවක රාජසිංහ රජු ගැන යුරෝපිය ඉතිහාසඥයන් අතර මෙන් ම සිංහල ඉතිහාසඥයන් අතර ද මත භේද පවතී. සිංහල ඉතිහාසඥයන්ගෙන් රාජාවලි කර්තෘ රාජසිංහ රජුගේ වීර වික්‍රමාන්විත ක්‍රියා ඉතා උසස් කර දක්වා ඇති නමුත් මහාවංශකාරයා ඔහු ගැන වැඩි වර්ණනාවක් නොකරන්නේ ය..</p>
+            
+                        <h4>සීතාවක රාජසිංහ රජු</h4>
+                        <p>සීතාවක රාජසිංහ රජු ගැන යුරෝපිය ඉතිහාසඥයන් අතර මෙන් ම සිංහල ඉතිහාසඥයන් අතර ද මත භේද පවතී. සිංහල ඉතිහාසඥයන්ගෙන් රාජාවලි කර්තෘ රාජසිංහ රජුගේ වීර වික්‍රමාන්විත ක්‍රියා ඉතා උසස් කර දක්වා ඇති නමුත් මහාවංශකාරයා ඔහු ගැන වැඩි වර්ණනාවක් නොකරන්නේ ය.</p>
+                    </div>
+            
+                    <div class="col-lg-6">
+                        <h4>සීතාවක රාජසිංහ රජු</h4>
+                        <p>සීතාවක රාජසිංහ රජු ගැන යුරෝපිය ඉතිහාසඥයන් අතර මෙන් ම සිංහල ඉතිහාසඥයන් අතර ද මත භේද පවතී. සිංහල ඉතිහාසඥයන්ගෙන් රාජාවලි කර්තෘ රාජසිංහ රජුගේ වීර වික්‍රමාන්විත ක්‍රියා ඉතා උසස් කර දක්වා ඇති නමුත් මහාවංශකාරයා ඔහු ගැන වැඩි වර්ණනාවක් නොකරන්නේ ය.</p>
+            
+                        <h4>සීතාවක රාජසිංහ රජු</h4>
+                        <p>සීතාවක රාජසිංහ රජු ගැන යුරෝපිය ඉතිහාසඥයන් අතර මෙන් ම සිංහල ඉතිහාසඥයන් අතර ද මත භේද පවතී. සිංහල ඉතිහාසඥයන්ගෙන් රාජාවලි කර්තෘ රාජසිංහ රජුගේ වීර වික්‍රමාන්විත ක්‍රියා ඉතා උසස් කර දක්වා ඇති නමුත් මහාවංශකාරයා ඔහු ගැන වැඩි වර්ණනාවක් නොකරන්නේ ය..</p>
+            
+                        <h4>සීතාවක රාජසිංහ රජු</h4>
+                        <p>සීතාවක රාජසිංහ රජු ගැන යුරෝපිය ඉතිහාසඥයන් අතර මෙන් ම සිංහල ඉතිහාසඥයන් අතර ද මත භේද පවතී. සිංහල ඉතිහාසඥයන්ගෙන් රාජාවලි කර්තෘ රාජසිංහ රජුගේ වීර වික්‍රමාන්විත ක්‍රියා ඉතා උසස් කර දක්වා ඇති නමුත් මහාවංශකාරයා ඔහු ගැන වැඩි වර්ණනාවක් නොකරන්නේ ය.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        
+        <footer class="footer">
+            <p>&copy; Sparks 2018</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

@@ -1,0 +1,145 @@
+html{
+	background-color:#e6f0ff;
+}
+
+body{
+	background-color:#e6f0ff;
+}
+
+.jumbotron{
+	background-color: #99c2ff !important;
+	padding: 20px 30px !important;
+}
+
+#search_text {
+	font-size: 20px;
+	color: #5e5e5e;	
+	float: left; 
+	width: 100%; 
+	height: 40px; 
+	margin: 5px 10px 10px 10px; 	
+	padding: 5px 10px 5px 10px; 
+	border: none; 
+	webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	border-radius: 5px; 
+	box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.5); 
+	-moz-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.5); 
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+#search_text:focus {
+	background: #ecf5fd;
+}
+
+.search-button{
+	float:right;
+}
+
+.detail{
+	text-align: justify;
+}
+
+.marketing{
+	text-align: justify;
+}
+
+.navbar-new {
+	overflow: hidden;
+	background-color: white;
+	position: inherit;
+	top: 0;
+	width: 100%;
+}
+  
+.navbar-new a {
+	float: center;
+	display: block;
+	color: gray;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+  
+.navbar-new a:hover {
+	background: #b3d1ff;
+	color: gray;
+}
+  
+.main {
+	padding: 16px;
+	margin-top: 30px;
+	/* height: 1000px; Used in this example to enable scrolling */
+}
+
+.header{
+	background-color: white;
+	color: black;
+	position: inherit;
+	width: 100%;
+	height: 80px;
+}
+
+.row-height{
+	height: 80px;
+	text-align: center;
+	display: block;
+}
+
+.heading{
+	height: 80px;
+	margin: 0px;
+	padding: 15px;
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+}
+
+.search-area{
+	font-size: 20px;
+	margin: 0px;
+	text-align: center;
+}
+
+.bookarea{
+	background-color: white;
+}
+
+row:before,
+.row:after{
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-lg-4{
+	width:25%;
+}
+
+.col-25{
+	width:25%;
+}
+
+.col-50{
+	width:50%;
+}
+
+.div-area{
+	width: 80%;
+	margin: auto;
+	border: 1px darkblue;
+	padding-top: 20px;
+}
+
+.subheading-div{
+	padding: 10px;
+	background-color: beige;
+	text-align: center;
+	}
