@@ -1,6 +1,7 @@
 # - coding: utf-8 --
 from flask import Flask, render_template, request, json
 from flaskext.mysql import MySQL
+from cosine import *
 
 app = Flask(__name__)
 
@@ -34,51 +35,77 @@ def loadBooks():
     books= []
 
     if _type == "general" :
-        _words = _name.split(" ")
-        for word in _words:
-            print(word)
-            cursor.callproc('loadbooks', [word])
-            data = cursor.fetchall()
-            print(data)
-            if len(data) != 0:
-                conn.commit()
-                for d in data:
-                    if d not in books:
-                        books.append(d)
-
-                print(books)
-            else:
-                return render_template('error.html', name=_name, text = "No Data Found")
+        data = relevance(_name)
+        if len(data) != 0:
+            # conn.commit()
+            for d in data:
+                print(d[0])
+                id = d[0]
+                value = d[1]
+                if value != 0.0:
+                    cursor.callproc('loadbooks', [id])
+                    book = cursor.fetchall()
+                    print(book[0])
+                    if len(book) != 0:
+                        conn.commit()
+                        books.append(book[0])
+                            
+            # print(books)
+        else:
+            return render_template('error.html', name=_name, text = "No Data Found")
     elif _type == "book":
         cursor.callproc('loadbookbyname', [_name])
         data = cursor.fetchall()
-        print(data)
+        # print(data)
         if len(data) != 0:
             conn.commit()
             for d in data:
-                if d not in books:
+                print("data")
+                print(d)
+                if len(books) == 0:
                     books.append(d)
+                else:
+                    for book in books:
+                        if book[0]==d[0]:
+                            continue
+                        else:
+                            print("books")
+                            books.append(d)
 
             print(books)
         else:
             return render_template('error.html', name=_name, text = "No Data Found")
     elif _type == "author" :
+        print("author")
         cursor.callproc('loadbookbyauthor', [_name])
         data = cursor.fetchall()
-        print(data)
+        # print(data)
         if len(data) != 0:
             conn.commit()
             for d in data:
-                books.append(d)
+                print("data")
+                print(d)
+                if len(books) == 0:
+                    books.append(d)
+                else:
+                    for book in books:
+                        if book[0]==d[0]:
+                            continue
+                        else:
+                            print("books")
+                            books.append(d)
 
-            print(books)
+            # print(books)
         else:
             return render_template('error.html', name=_name, text = "No Data Found")
 
-    print(data)
+    # print(data)
     if len(data) != 0:
         conn.commit()
-        return render_template('book.html', name=_name, data = books)
+        if len(books) == 0:
+            return render_template('error.html', name=_name, text = "No Data Found")
+        else:
+            return render_template('book.html', name=_name, data = books)
     else:
         return render_template('error.html', name=_name, text = "No Data Found")
 
