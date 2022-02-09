@@ -51,7 +51,7 @@ sessioninstaller==0.0.0
 six==1.11.0
 ssh-import-id==5.5
 system-service==0.3
-tensorflow==1.4.1
+tensorflow==2.5.3
 tensorflow-tensorboard==0.4.0rc3
 ubuntu-drivers-common==0.0.0
 ufw==0.35
